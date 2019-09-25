@@ -19,12 +19,12 @@ namespace Logon
             Program.password = textBoxPassword.Text.ToString();
             if (comboBox_IPChoose.SelectedIndex == 1)
             {
-                Program.dllMes1 = new DoMain("http://122.226.226.243:6000/mestest/webservice/mesapi.asmx");
+                Program.dllMes1 = new DoMain("http://IP:6000/mestest/webservice/mesapi.asmx");
                 Console.WriteLine("外网登录");
             }
             else
             {
-                Program.dllMes1 = new DoMain("http://10.100.31.200/mestest/webservice/mesapi.asmx");
+                Program.dllMes1 = new DoMain("http://ip/mestest/webservice/mesapi.asmx");//539024650589
                 Console.WriteLine("内网登录");
             }
             string result = Program.dllMes1.Logon(Program.username, Program.password);
